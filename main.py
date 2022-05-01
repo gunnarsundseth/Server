@@ -5,7 +5,7 @@ import os
 import pyautogui# pip install pyautogui
 import getpass # pip install getpass
 from http.server import BaseHTTPRequestHandler, HTTPServer
-ip = open("IP").read()
+ip = open("IP.txt").read()
 #ip = "10.0.0.7" #Set manual IP address.
 
 class RequestHandler_httpd(BaseHTTPRequestHandler):
