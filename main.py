@@ -5,8 +5,8 @@ import os
 import pyautogui# pip install pyautogui
 import getpass # pip install getpass
 from http.server import BaseHTTPRequestHandler, HTTPServer
-#iptext = 
-ip = "10.0.0.7" #Set manual IP address.
+ip = open("IP").read()
+#ip = "10.0.0.7" #Set manual IP address.
 
 class RequestHandler_httpd(BaseHTTPRequestHandler):
     pyautogui.FAILSAFE = False
@@ -84,5 +84,3 @@ server_address_httpd = (ip, 8080)
 httpd = HTTPServer(server_address_httpd, RequestHandler_httpd)
 print("Starting Server:")
 httpd.serve_forever()
-
-        
